@@ -1,14 +1,14 @@
 
-## Statistical Testing [Suggested time: 15 minutes]
+## Statistical Testing
 
-You are working for a TexMex restaurant that recently introduced Queso to its menu.
+You are working for a TexMex restaurant that recently introduced queso to its menu.
 
-We have random samples of 1000 "No Queso" order check totals and 1000 "Queso" order check totals for orders made by different customers.
+We have random samples of 1000 "no queso" order check totals and 1000 "queso" order check totals for orders made by different customers.
 
 In the cell below, we load the sample data for you into the arrays `no_queso` and `queso` for the "no queso" and "queso" order check totals. Then, we create histograms of the distribution of the check amounts for the "no queso" and "queso" samples. 
 
 
-```
+```python
 # import the necessary libraries
 import numpy as np
 import pandas as pd 
@@ -18,7 +18,7 @@ import pickle
 ```
 
 
-```
+```python
 # __SOLUTION__
 # import the necessary libraries
 import numpy as np
@@ -29,12 +29,12 @@ import pickle
 ```
 
 
-```
-# Load the sample data 
+```python
+# load the sample data 
 no_queso = pickle.load(open("data/no_queso.pkl", "rb"))
 queso = pickle.load(open("data/queso.pkl", "rb"))
 
-# Plot histograms
+# plot histograms
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
 
@@ -51,13 +51,13 @@ plt.show()
 ```
 
 
-```
+```python
 # __SOLUTION__ 
-# Load the sample data 
+# load the sample data 
 no_queso = pickle.load(open("data/no_queso.pkl", "rb"))
 queso = pickle.load(open("data/queso.pkl", "rb"))
 
-# Plot histograms
+# plot histograms
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
 
@@ -77,19 +77,19 @@ plt.show()
 ![png](index_files/index_5_0.png)
 
 
-### a. Hypotheses and Errors
+### 1. Hypotheses and Errors
 
-The restaurant owners want to know if customers who order Queso spend **more or less** than customers who do not order Queso.
+The restaurant owners want to know if customers who order queso spend **more or less** than customers who do not order queso.
 
-3.a.1) Set up the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
+1a) Describe the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
 
 
+```python
+# your written answer here
 ```
-# Your written answer here
-```
 
 
-```
+```python
 # __SOLUTION__
 
 """
@@ -99,15 +99,15 @@ Alternative hypothesis: Customers who order queso do not spend the same as those
 """
 ```
 
-3.a.2) What does it mean to make `Type I` and `Type II` errors in this specific context?
+1b) What does it mean to make `Type I` and `Type II` errors in this specific context?
 
 
+```python
+# your written answer here
 ```
-# your answer here
-```
 
 
-```
+```python
 # __SOLUTION__
 """
 Type I: (Rejecting the null hypothesis given it's true): Saying queso customers' total check amounts are different 
@@ -120,24 +120,19 @@ the same as non-queso customers' total check amounts when they are different.
 # Give partial credit to students who describe what type I and type II errors are. 
 ```
 
-### b. Sample Testing
+### 2. Sample Testing
 
-3.b.1) Run a statistical test on the two samples. Use a significance level of $\alpha = 0.05$. You can assume the two samples have equal variance. Can you reject the null hypothesis? 
+2a) Run a statistical test on the two samples. Use a significance level of $\alpha = 0.05$. You can assume the two samples have equal variance. 
 
-_Hint: Use `scipy.stats`._
+_Hint: Use `scipy.stats` (imported as `stats` above)._
 
 
-```
+```python
 # your code here 
 ```
 
 
-```
-# your answer here
-```
-
-
-```
+```python
 # __SOLUTION__ 
 
 # Run a two-tailed t-test
@@ -152,8 +147,15 @@ print(critical_t)
     (-1.962341461133449, 1.9623414611334487)
 
 
+2b) Can you reject the null hypothesis?
 
+
+```python
+# your written answer here
 ```
+
+
+```python
 # __SOLUTION__
 # We have enough evidence to reject the null hypothesis at a significance level of alpha = 0.05. We obtain a p-value
 # much smaller than 0.025 (two-tailed test). Alternatively, our t-statistic is smaller than the critical t-statistic.
