@@ -1,14 +1,14 @@
 
-## Statistical Testing [Suggested time: 15 minutes]
+## Statistical Testing
 
-You are working for a TexMex restaurant that recently introduced Queso to its menu.
+You are working for a TexMex restaurant that recently introduced queso to its menu.
 
-We have random samples of 1000 "No Queso" order check totals and 1000 "Queso" order check totals for orders made by different customers.
+We have random samples of 1000 "no queso" order check totals and 1000 "queso" order check totals for orders made by different customers.
 
 In the cell below, we load the sample data for you into the arrays `no_queso` and `queso` for the "no queso" and "queso" order check totals. Then, we create histograms of the distribution of the check amounts for the "no queso" and "queso" samples. 
 
 
-```
+```python
 # import the necessary libraries
 import numpy as np
 import pandas as pd 
@@ -18,12 +18,12 @@ import pickle
 ```
 
 
-```
-# Load the sample data 
+```python
+# load the sample data 
 no_queso = pickle.load(open("data/no_queso.pkl", "rb"))
 queso = pickle.load(open("data/queso.pkl", "rb"))
 
-# Plot histograms
+# plot histograms
 
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
 
@@ -39,36 +39,38 @@ ax2.hist(queso, bins=20)
 plt.show()
 ```
 
-### a. Hypotheses and Errors
+### 1. Hypotheses and Errors
 
-The restaurant owners want to know if customers who order Queso spend **more or less** than customers who do not order Queso.
+The restaurant owners want to know if customers who order queso spend **more or less** than customers who do not order queso.
 
-3.a.1) Set up the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
-
-
-```
-# Your written answer here
-```
-
-3.a.2) What does it mean to make `Type I` and `Type II` errors in this specific context?
+1a) Describe the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
 
 
-```
-# your answer here
+```python
+# your written answer here
 ```
 
-### b. Sample Testing
-
-3.b.1) Run a statistical test on the two samples. Use a significance level of $\alpha = 0.05$. You can assume the two samples have equal variance. Can you reject the null hypothesis? 
-
-_Hint: Use `scipy.stats`._
+1b) What does it mean to make `Type I` and `Type II` errors in this specific context?
 
 
+```python
+# your written answer here
 ```
+
+### 2. Sample Testing
+
+2a) Run a statistical test on the two samples. Use a significance level of $\alpha = 0.05$. You can assume the two samples have equal variance. 
+
+_Hint: Use `scipy.stats` (imported as `stats` above)._
+
+
+```python
 # your code here 
 ```
 
+2b) Can you reject the null hypothesis?
 
-```
-# your answer here
+
+```python
+# your written answer here
 ```
