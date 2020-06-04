@@ -20,6 +20,9 @@ import matplotlib.pyplot as plt
 
 #object import / export
 import pickle
+
+#jn command to run matplotlib inline
+%matplotlib inline
 ```
 
 
@@ -38,6 +41,7 @@ import matplotlib.pyplot as plt
 #object import / export
 import pickle
 
+#jn command to run matplotlib inline
 %matplotlib inline
 ```
 
@@ -94,7 +98,7 @@ plt.show()
 
 The restaurant owners want to know if customers who order queso spend **significantly more *or* significantly less** than customers who do not order queso.
 
-1a) Describe the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
+#### 1a) Describe the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
 
 
 ```python
@@ -119,7 +123,7 @@ Alternative hypothesis: Customers who order queso do not spend the same as those
     
 
 
-1b) What does it mean to make `Type I` and `Type II` errors in this specific context?
+#### 1b) What does it mean to make `Type I` and `Type II` errors in this specific context?
 
 
 ```python
@@ -151,7 +155,7 @@ the same as non-queso customers' total check amounts when they are different.
 
 ### 2. Sample Testing
 
-2a) Run a statistical test on the two samples. Use a significance level of $\alpha = 0.05$. You can assume the two samples have equal variance. 
+#### 2a) Run a statistical test on the two samples. Use a significance level of $\alpha = 0.05$. You can assume the two samples have equal variance. 
 
 _Hint: Use `scipy.stats` (imported as `stats` above)._
 
@@ -177,9 +181,9 @@ print(critical_t)
     (-1.962341461133449, 1.9623414611334487)
 
 
-2b) Can you reject the null hypothesis at a significance level of $\alpha = 0.05$?  
+#### 2b) Can you reject the null hypothesis at a significance level of $\alpha = 0.05$?  
 
-Why or why not?
+#### Why or why not?
 
 
 ```python
