@@ -1,4 +1,3 @@
-
 ## Statistical Testing
 
 You are working for a TexMex restaurant that recently introduced queso to its menu.
@@ -10,10 +9,16 @@ In the cell below, we load the sample data for you into the arrays `no_queso` an
 
 ```python
 # import the necessary libraries
+
+#data manip
 import numpy as np
 import pandas as pd 
 from scipy import stats
+
+#viz
 import matplotlib.pyplot as plt
+
+#object import / export
 import pickle
 ```
 
@@ -21,11 +26,19 @@ import pickle
 ```python
 # __SOLUTION__
 # import the necessary libraries
+
+#data manip
 import numpy as np
 import pandas as pd 
 from scipy import stats
+
+#viz
 import matplotlib.pyplot as plt
+
+#object import / export
 import pickle
+
+%matplotlib inline
 ```
 
 
@@ -79,7 +92,7 @@ plt.show()
 
 ### 1. Hypotheses and Errors
 
-The restaurant owners want to know if customers who order queso spend **more or less** than customers who do not order queso.
+The restaurant owners want to know if customers who order queso spend **significantly more *or* significantly less** than customers who do not order queso.
 
 1a) Describe the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
 
@@ -92,12 +105,19 @@ The restaurant owners want to know if customers who order queso spend **more or 
 ```python
 # __SOLUTION__
 
-"""
+print("""
 Null hypothesis: Customers who order queso spend the same as those who do not order queso. 
 
 Alternative hypothesis: Customers who order queso do not spend the same as those who do not order queso. 
-"""
+""")
 ```
+
+    
+    Null hypothesis: Customers who order queso spend the same as those who do not order queso. 
+    
+    Alternative hypothesis: Customers who order queso do not spend the same as those who do not order queso. 
+    
+
 
 1b) What does it mean to make `Type I` and `Type II` errors in this specific context?
 
@@ -109,16 +129,25 @@ Alternative hypothesis: Customers who order queso do not spend the same as those
 
 ```python
 # __SOLUTION__
-"""
+print("""
 Type I: (Rejecting the null hypothesis given it's true): Saying queso customers' total check amounts are different 
 than non-queso customers' total check amounts when they are the same.
 
 Type II: (Failing to reject the null hypothesis given it's false): Saying queso customers' total check amounts are 
 the same as non-queso customers' total check amounts when they are different.
-"""
+""")
 
 # Give partial credit to students who describe what type I and type II errors are. 
 ```
+
+    
+    Type I: (Rejecting the null hypothesis given it's true): Saying queso customers' total check amounts are different 
+    than non-queso customers' total check amounts when they are the same.
+    
+    Type II: (Failing to reject the null hypothesis given it's false): Saying queso customers' total check amounts are 
+    the same as non-queso customers' total check amounts when they are different.
+    
+
 
 ### 2. Sample Testing
 
@@ -137,17 +166,20 @@ _Hint: Use `scipy.stats` (imported as `stats` above)._
 
 # Run a two-tailed t-test
 print(stats.ttest_ind(no_queso, queso))
-
+print()
 # Students may compute the critical t-statistics for the rejection region
 critical_t = (stats.t.ppf(0.025, df=999), stats.t.ppf(0.975, df=999))
 print(critical_t)
 ```
 
     Ttest_indResult(statistic=-45.16857748646329, pvalue=1.29670967092511e-307)
+    
     (-1.962341461133449, 1.9623414611334487)
 
 
-2b) Can you reject the null hypothesis?
+2b) Can you reject the null hypothesis at a significance level of $\alpha = 0.05$?  
+
+Why or why not?
 
 
 ```python
@@ -157,7 +189,14 @@ print(critical_t)
 
 ```python
 # __SOLUTION__
-# We have enough evidence to reject the null hypothesis at a significance level of alpha = 0.05. We obtain a p-value
-# much smaller than 0.025 (two-tailed test). Alternatively, our t-statistic is smaller than the critical t-statistic.
-# Both answers (p-value or critical t-statistic) are valid. 
+'''
+We have enough evidence to reject the null hypothesis 
+at a significance level of alpha = 0.05. We obtain a p-value
+much smaller than 0.025 (two-tailed test). 
+
+Alternatively: 
+our t-statistic is smaller than the critical t-statistic.
+
+Both answers (p-value or critical t-statistic) are valid. 
+'''
 ```
