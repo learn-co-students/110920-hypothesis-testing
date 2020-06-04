@@ -1,4 +1,3 @@
-
 ## Statistical Testing
 
 You are working for a TexMex restaurant that recently introduced queso to its menu.
@@ -10,10 +9,16 @@ In the cell below, we load the sample data for you into the arrays `no_queso` an
 
 ```python
 # import the necessary libraries
+
+#data manip
 import numpy as np
 import pandas as pd 
 from scipy import stats
+
+#viz
 import matplotlib.pyplot as plt
+
+#object import / export
 import pickle
 ```
 
@@ -41,7 +46,7 @@ plt.show()
 
 ### 1. Hypotheses and Errors
 
-The restaurant owners want to know if customers who order queso spend **more or less** than customers who do not order queso.
+The restaurant owners want to know if customers who order queso spend **significantly more *or* significantly less** than customers who do not order queso.
 
 1a) Describe the null $H_{0}$ and alternative hypotheses $H_{A}$ for this test.
 
@@ -68,7 +73,9 @@ _Hint: Use `scipy.stats` (imported as `stats` above)._
 # your code here 
 ```
 
-2b) Can you reject the null hypothesis?
+2b) Can you reject the null hypothesis at a significance level of $\alpha = 0.05$?  
+
+Why or why not?
 
 
 ```python
