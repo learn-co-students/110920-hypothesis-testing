@@ -8,6 +8,8 @@ In the cell below, we load the sample data for you into the arrays `no_queso` an
 
 
 ```python
+#run this cell without changes
+
 # import the necessary libraries
 
 #data manip
@@ -27,6 +29,8 @@ import pickle
 
 
 ```python
+#run this cell without changes
+
 # load the sample data 
 no_queso = pickle.load(open("data/no_queso.pkl", "rb"))
 queso = pickle.load(open("data/queso.pkl", "rb"))
