@@ -8,6 +8,8 @@ In the cell below, we load the sample data for you into the arrays `no_queso` an
 
 
 ```python
+#run this cell without changes
+
 # import the necessary libraries
 
 #data manip
@@ -27,6 +29,8 @@ import pickle
 
 
 ```python
+#run this cell without changes
+
 # __SOLUTION__
 # import the necessary libraries
 
@@ -47,6 +51,8 @@ import pickle
 
 
 ```python
+#run this cell without changes
+
 # load the sample data 
 no_queso = pickle.load(open("data/no_queso.pkl", "rb"))
 queso = pickle.load(open("data/queso.pkl", "rb"))
@@ -109,11 +115,11 @@ The restaurant owners want to know if customers who order queso spend **signific
 ```python
 # __SOLUTION__
 
-print("""
+"""
 Null hypothesis: Customers who order queso spend the same as those who do not order queso. 
 
 Alternative hypothesis: Customers who order queso do not spend the same as those who do not order queso. 
-""")
+"""
 ```
 
     
@@ -133,13 +139,13 @@ Alternative hypothesis: Customers who order queso do not spend the same as those
 
 ```python
 # __SOLUTION__
-print("""
+"""
 Type I: (Rejecting the null hypothesis given it's true): Saying queso customers' total check amounts are different 
 than non-queso customers' total check amounts when they are the same.
 
 Type II: (Failing to reject the null hypothesis given it's false): Saying queso customers' total check amounts are 
 the same as non-queso customers' total check amounts when they are different.
-""")
+"""
 
 # Give partial credit to students who describe what type I and type II errors are. 
 ```
